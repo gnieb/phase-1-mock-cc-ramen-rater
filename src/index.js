@@ -13,6 +13,12 @@ fetch("http://localhost:3000/ramens")
 .then(resp=> resp.json())
 .then((arrayOfObjects)=> {
     arrayOfObjects.forEach(renderRamen)
+    ramenImageContainer.src = arrayOfObjects[0].image;
+    ramenNameH2.innerText = arrayOfObjects[0].name;
+    ramenRestH3.innerText = arrayOfObjects[0].restaurant
+    ramenRatingContainer.innerText = arrayOfObjects[0].rating
+    ramenCommentContainer.innerText = arrayOfObjects[0].comment
+
 })
 
 
